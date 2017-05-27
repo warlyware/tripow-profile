@@ -11,3 +11,4 @@ var database = firebase.database().ref('test')
 database.on('value', snapshot => {
     console.log(snapshot.val());
 });
+require('./app/application.module');
