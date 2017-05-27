@@ -19,9 +19,10 @@
         <script src="main.bundle.js"></script>
     </head>
     <body ng-app="tripow"
-    class="layout-column bg-color-light-gray">
+    class="layout-column bg-color-light-gray" ng-controller="ApplicationController as $ctrl">
         <div class="layout-row flex-80 layout-align-center-center">
-            <h1 class="md-display-4 color-pink">T R I P O W</h1>
+            <h1 ng-class="$ctrl.isXs() ? 'md-display-3' : 'md-display-4'"
+            class="color-pink">T R I P O W</h1>
         </div>
         <div id="color-swatch" class="layout-row flex-20">
             <div class="flex-20 bg-color-pink"></div>
