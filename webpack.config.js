@@ -20,14 +20,12 @@ module.exports = {
 				presets: ["env"]
 			}
 		}, {
-			test: /\.css$/,
-			loader: ExtractTextPlugin.extract(
-                { fallback: 'style-loader', use: 'css-loader?sourceMap' }
-            )
-		}, {
 			test: /\.scss$/,
 			loader: ExtractTextPlugin.extract(
-                { fallback: 'style-loader', use: 'css-loader?sourceMap!sass-loader?sourceMap' }
+                {
+					fallback: 'style-loader',
+					use: ['css-loader', 'sass-loader']
+				}
             )
 		}]
 	},
