@@ -3,3 +3,35 @@ $light-gray: #CFCFCF;
 $dark-gray: #828282;
 $light-blue: #71AAD5;
 $off-white: #F7F7F7;
+
+.color-pink {
+    color: $pink;
+}
+.color-light-gray {
+    color: $light-gray;
+}
+.color-dark-gray {
+    color: $dark-gray;
+}
+.color-light-blue {
+    color: $light-blue;
+}
+.color-off-white {
+    color: $off-white;
+}
+
+.bg-color-pink {
+    background-color: $pink;
+}
+.bg-color-light-gray {
+    background-color: $light-gray;
+}
+.bg-color-dark-gray {
+    background-color: $dark-gray;
+}
+.bg-color-light-blue {
+    background-color: $light-blue;
+}
+.bg-color-off-white {
+    background-color: $off-white;
+}
