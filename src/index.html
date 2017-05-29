@@ -7,12 +7,12 @@
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.css">
         <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Asset|Cinzel:900|Exo:900|Kanit:800|Limelight|Montserrat:900|Paytone+One|Seymour+One|Syncopate:700" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.10/p5.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-aria.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-messages.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.js"></script>
-
         <script src="//www.gstatic.com/firebasejs/4.0.0/firebase-app.js"></script>
         <script src="//www.gstatic.com/firebasejs/4.0.0/firebase-auth.js"></script>
         <script src="//www.gstatic.com/firebasejs/4.0.0/firebase-database.js"></script>
@@ -23,8 +23,9 @@
     ng-controller="ApplicationController as $ctrl"
     class="layout-column bg-color-light-gray"
     ng-click="$ctrl.changeFont()">
+        <div id="canvas" class="position-absolute"></div>
         <div class="hide show-xs show-sm layout-column layout-align-center-center
-        flex-60 color-pink font-{{$ctrl.currentFont}}">
+        flex-60 color-pink font-{{$ctrl.currentFont}} foreground">
             <div class="layout-row width-100 flex-30">
                 <div class="layout-column layout-align-center-center flex-33">T</div>
                 <div class="layout-column layout-align-center-center flex-33">R</div>
@@ -37,7 +38,7 @@
             </div>
         </div>
         <div class="hide show-gt-sm layout-row layout-align-center-center
-        flex-80 color-pink font-{{$ctrl.currentFont}}">
+        flex-80 color-pink font-{{$ctrl.currentFont}} foreground">
             <div class="layout-column layout-align-center-center flex-15">T</div>
             <div class="layout-column layout-align-center-center flex-15">R</div>
             <div class="layout-column layout-align-center-center flex-15">I</div>
@@ -45,7 +46,7 @@
             <div class="layout-column layout-align-center-center flex-15">O</div>
             <div class="layout-column layout-align-center-center flex-15">W</div>
         </div>
-        <div id="color-swatch" class="layout-row flex-40 bg-color-light-blue layout-align-center-center">
+        <div id="color-swatch" class="layout-row flex-40 bg-color-light-blue layout-align-center-center foreground">
             <h1 class="color-off-white md-display-2 uppercase" ng-bind="$ctrl.currentFont"></h1>
         </div>
         <!--<div id="color-swatch" class="layout-row flex-20">

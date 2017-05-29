@@ -33,3 +33,11 @@
 .uppercase {
     text-transform: uppercase;
 }
+
+.foreground {
+    z-index: 1;
+}
+
+canvas {
+    position: absolute;
+}
