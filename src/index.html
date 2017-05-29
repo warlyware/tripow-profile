@@ -21,9 +21,10 @@
     </head>
     <body ng-app="tripow"
     ng-controller="ApplicationController as $ctrl"
-    class="layout-column bg-color-light-gray font-asset">
+    class="layout-column bg-color-light-gray"
+    ng-click="$ctrl.changeFont()">
         <div class="hide show-xs show-sm layout-column layout-align-center-center
-        flex-80 color-pink">
+        flex-80 color-pink font-{{$ctrl.currentFont}}">
             <div class="layout-row width-100 flex-40">
                 <div class="layout-column layout-align-center-center flex-33">T</div>
                 <div class="layout-column layout-align-center-center flex-33">R</div>
@@ -36,7 +37,7 @@
             </div>
         </div>
         <div class="hide show-gt-sm layout-row layout-align-center-center
-        flex-80 color-pink">
+        flex-80 color-pink font-{{$ctrl.currentFont}}">
             <div class="layout-column layout-align-center-center flex-15">T</div>
             <div class="layout-column layout-align-center-center flex-15">R</div>
             <div class="layout-column layout-align-center-center flex-15">I</div>
@@ -44,12 +45,15 @@
             <div class="layout-column layout-align-center-center flex-15">O</div>
             <div class="layout-column layout-align-center-center flex-15">W</div>
         </div>
-        <div id="color-swatch" class="layout-row flex-20">
+        <div id="color-swatch" class="layout-row flex-20 bg-color-light-blue layout-align-center-center">
+            <h1 class="color-off-white md-display-2 uppercase" ng-bind="$ctrl.currentFont"></h1>
+        </div>
+        <!--<div id="color-swatch" class="layout-row flex-20">
             <div class="flex-20 bg-color-pink"></div>
             <div class="flex-20 bg-color-light-gray"></div>
             <div class="flex-20 bg-color-dark-gray"></div>
             <div class="flex-20 bg-color-light-blue"></div>
             <div class="flex-20 bg-color-off-white"></div>
-        </div>
+        </div>-->
     </body>
 </html>

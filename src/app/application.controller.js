@@ -6,11 +6,28 @@ angular.module('tripow')
     function ApplicationController($mdMedia) {
         var vm = this;
 
-        vm.isXs = () => {
-            return $mdMedia('xs');
+        const fonts = [
+            'asset',
+            'exo',
+            'archivo-black',
+            'cinzel',
+            'kanit',
+            'paytone-one',
+            'syncopate',
+            'limelight'
+
+        ];
+        let currentFontIndex = 0;
+        vm.currentFont = fonts[currentFontIndex];
+
+        vm.changeFont = () => {
+            if (currentFontIndex === fonts.length - 1) {
+                currentFontIndex = 0;
+            } else {
+                currentFontIndex += 1;
+            }
+            vm.currentFont = fonts[currentFontIndex];
         }
 
-        vm.isSm = () => {
-            return $mdMedia('xs');
-        }
+        return vm;
     }
