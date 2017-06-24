@@ -1,14 +1,12 @@
 angular.module('tripow', ['ngMaterial']);
 
 angular.module('tripow').run(() => {
-    console.log('i am angular!');
-
     var colors = [
         {
-            name: 'blue',
-            hex: '#71AAD5'
+            name: 'dark-grey',
+            hex: '#828282'
         }, {
-            name: 'grey',
+            name: 'light-grey',
             hex: '#CFCFCF'
         }
     ];
@@ -19,8 +17,10 @@ angular.module('tripow').run(() => {
     let lerpIndex = 0;
     let shifted = false;
     let counter;
+    let sketchInstance;
 
-    let sketch = (sketchInstance) => {
+    let sketch = (sI) => {
+        sketchInstance = sI;
         sketchInstance.setup = () => {
             currentColor = colors[0];
             nextColor = colors[1];
@@ -31,9 +31,7 @@ angular.module('tripow').run(() => {
             let bgColor;
             counter = (sketchInstance.millis() / 10000) % 1;
             lerpIndex = counter;
-            console.log('counter', counter);
-            console.log('lerpIndex', lerpIndex);
-            if (counter >= 0.95) {
+            if (counter >= 0.98) {
                 lerpIndex = 0;
                 if (!shifted) {
                     shiftColors(sketchInstance);
@@ -49,6 +47,10 @@ angular.module('tripow').run(() => {
                 );
                 sketchInstance.background(bgColor);
             }
+        }
+
+        sketchInstance.windowResized = () => {
+            sketchInstance.resizeCanvas(window.innerWidth, window.innerHeight);
         }
     }
 	let myP5 = new p5(sketch);

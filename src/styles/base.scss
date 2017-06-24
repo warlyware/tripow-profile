@@ -37,7 +37,11 @@
 .foreground {
     z-index: 1;
 }
+.position-relative {
+    position: relative;
+}
 
 canvas {
+    top: 0;
     position: absolute;
 }

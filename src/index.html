@@ -21,11 +21,11 @@
     </head>
     <body ng-app="tripow"
     ng-controller="ApplicationController as $ctrl"
-    class="layout-column bg-color-light-gray"
+    class="layout-column bg-color-light-gray position-relative"
     ng-click="$ctrl.changeFont()">
         <div id="canvas" class="position-absolute"></div>
         <div class="hide show-xs show-sm layout-column layout-align-center-center
-        flex-60 color-pink font-{{$ctrl.currentFont}} foreground">
+        flex-60 color-light-blue font-{{$ctrl.currentFont}} foreground">
             <div class="layout-row width-100 flex-30">
                 <div class="layout-column layout-align-center-center flex-33">T</div>
                 <div class="layout-column layout-align-center-center flex-33">R</div>
@@ -49,12 +49,5 @@
         <div id="color-swatch" class="layout-row flex-40 bg-color-light-blue layout-align-center-center foreground">
             <h1 class="color-off-white md-display-2 uppercase" ng-bind="$ctrl.currentFont"></h1>
         </div>
-        <!--<div id="color-swatch" class="layout-row flex-20">
-            <div class="flex-20 bg-color-pink"></div>
-            <div class="flex-20 bg-color-light-gray"></div>
-            <div class="flex-20 bg-color-dark-gray"></div>
-            <div class="flex-20 bg-color-light-blue"></div>
-            <div class="flex-20 bg-color-off-white"></div>
-        </div>-->
     </body>
 </html>
