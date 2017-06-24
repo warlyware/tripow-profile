@@ -17,11 +17,11 @@ export class BackgroundColorLerper {
 
         this.colors = [
             {
-                name: 'dark-grey',
-                hex: '#828282'
+                name: 'dark-blue',
+                hex: '#5070F3'
             }, {
-                name: 'light-grey',
-                hex: '#CFCFCF'
+                name: 'light-blue',
+                hex: '#71AAD5'
             }
         ];
     }
