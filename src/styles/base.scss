@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'colors';
 @import 'fonts';
+@import 'margin-padding';
 
 .width-100 {
     width: 100%;
@@ -34,6 +35,12 @@
     text-transform: uppercase;
 }
 
+.no-wrap-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .foreground {
     z-index: 1;
 }
@@ -44,4 +51,12 @@
 canvas {
     top: 0;
     position: absolute;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+.underline-white {
+    text-decoration: underline $off-white;
 }
