@@ -33,6 +33,7 @@ export class BackgroundColorLerper {
                 this.currentColor = this.colors[0];
                 this.nextColor = this.colors[1];
                 this.canvas = this.sketchInstance.createCanvas(window.innerWidth, window.innerHeight);
+                this.canvas.parent('canvas');
             }
 
             this.sketchInstance.draw = () => {

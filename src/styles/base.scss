@@ -41,14 +41,23 @@
     text-overflow: ellipsis;
 }
 
-.foreground {
+
+.background {
     z-index: 1;
 }
+.foreground {
+    z-index: 2;
+}
+
 .position-relative {
     position: relative;
 }
+.top-0 {
+    top: 0;
+}
 
 canvas {
+    z-index: 1;
     top: 0;
     position: absolute;
 }
@@ -58,5 +67,12 @@ canvas {
 }
 
 .underline-white {
-    text-decoration: underline $off-white;
+    -webkit-text-decoration-style: $off-white;
+    -webkit-text-decoration-line: underline;
+    text-decoration-style: $off-white;
+    text-decoration-line: underline;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
