@@ -106,12 +106,13 @@ export class BackgroundColorLerper {
                 this.fadeCounter
             );
             this.sketchInstance.background(this.bgColor);
-        } else {
         }
-        this.fontSize += 0.25;
-        this.opacity -= 0.02;
-        this.tripowElement.style('font-size', `${this.fontSize}px`);
-        this.tripowElement.style('opacity', `${this.opacity}`);
+        if (this.fadeCounter > 0.1) {
+            this.fontSize += 0.25;
+            this.opacity -= 0.02;
+            this.tripowElement.style('font-size', `${this.fontSize}px`);
+            this.tripowElement.style('opacity', `${this.opacity}`);
+        }
     }
 
     shiftColors(sketchInstance) {
