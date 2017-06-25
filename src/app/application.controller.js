@@ -6,7 +6,5 @@ angular.module('tripow')
     function ApplicationController($mdMedia) {
         let vm = this;
 
-
-
         return vm;
     }
