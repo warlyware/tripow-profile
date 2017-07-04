@@ -25,37 +25,40 @@
     class="layout-column bg-color-light-gray"
     ng-click="$ctrl.changeFont()">
         <div id="canvas" class="position-relative background"></div>
-        <div class="position-relative hide show-xs show-sm color-black foreground md-display-3 overflow-hidden">
-            <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center height-100">
-                G E F H A E 3 X Y S
+        <div class="position-relative md-padding hide show-xs show-sm color-black foreground md-display-3 overflow-hidden">
+            <div class="layout-row layout-align-space-between padding-top-16 no-wrap-text letter-spacing-wide">
+                <div ng-repeat="letter in $ctrl.letters[0] track by $index">{{letter}}</div>
             </div>
-            <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
-                O 6 A P 2 N 8 V P X
+            <div class="layout-row layout-align-space-between padding-top-16 no-wrap-text letter-spacing-wide">
+                <div ng-repeat="letter in $ctrl.letters[1] track by $index">{{letter}}</div>
             </div>
-            <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
+            <div class="layout-row layout-align-space-between padding-top-16 no-wrap-text letter-spacing-wide">
                 K Y 4 C P S X J E 4
             </div>
-            <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
+            <div class="layout-row layout-align-space-between padding-top-16 no-wrap-text letter-spacing-wide">
                 9 V F P X A E C U D
-            </div>            <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
+            </div>
+            <div class="layout-row layout-align-space-between padding-top-16 no-wrap-text letter-spacing-wide">
                 C 0 Z 6 G S N B 5 L
             </div>
-            <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
+            <div class="layout-row layout-align-space-between padding-top-16 no-wrap-text letter-spacing-wide">
                 E D&nbsp;
                 <span id="tripow" class="color-off-white underline-white cursor-pointer">T R I P O W</span>
                 &nbsp;X Q
             </div>
-            <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
+            <div class="layout-row layout-align-space-between padding-top-16 no-wrap-text letter-spacing-wide">
                 H X Y E 7 V S K E 3
             </div>
-            <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
+            <div class="layout-row layout-align-space-between padding-top-16 no-wrap-text letter-spacing-wide">
                 L 0 H N E S W J H Z
-            </div>            <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
+            </div>
+            <div class="layout-row layout-align-space-between padding-top-16 no-wrap-text letter-spacing-wide">
                 O M K F Y X W J 2 J
             </div>
-            <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
+            <div class="layout-row layout-align-space-between padding-top-16 no-wrap-text letter-spacing-wide">
                 G T D 7 G J L I F 4
-            </div>            <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
+            </div>
+            <div class="layout-row layout-align-space-between padding-top-16 no-wrap-text letter-spacing-wide">
                 K R I D W C 5 A X I
             </div>
         </div>
