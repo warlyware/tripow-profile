@@ -9,10 +9,12 @@ angular.module('tripow')
         let vm = this;
 
         vm.menuIsOn = false;
+        vm.canvasReady = true;
         vm.$mdMedia = $mdMedia;
 
         vm.showMenu = () => {
             $timeout(() => {
+                vm.canvasReady = false;
                 vm.menuIsOn = true;
             }, 500);
         }
@@ -20,10 +22,11 @@ angular.module('tripow')
         vm.closeMenu = () => {
             vm.menuIsOn = false;
             $timeout(()=> {
+                vm.canvasReady = true;
                 let bgColorLerper = new BackgroundColorLerper;
                 bgColorLerper.init();
                 bgColorLerper.run();
-            }, 500);
+            }, 600);
         }
 
         return vm;
