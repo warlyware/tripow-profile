@@ -73,19 +73,26 @@
             </div>
         </div>
         <div ng-if="$ctrl.menuIsOn"
+        ng-click="$ctrl.closeMenu()"
         ng-class="{'md-display-2': $ctrl.$mdMedia('xs'),
         'md-display-3': $ctrl.$mdMedia('gt-xs')}"
-        class="position-absolute layout-fill foreground overflow-hidden
-        layout-column layout-align-space-around-center fade-element-in">
-            <a href="//youtube.com"
-            target="_blank"
-            class="color-off-white">Y O U T U B E</a>
-            <a href="//soundcloud.com"
-            target="_blank"
-            class="color-off-white">S O U N D<br> C L O U D</a>
-            <a href="//bandcamp.com"
-            target="_blank"
-            class="color-off-white">B A N D C A M P</a>
+        class="position-relative layout-column layout-fill foreground-menu overflow-hidden fade-element-in">
+            <div class="layout-row layout-align-end">
+                <md-button class="md-primary md-fab">
+                    <span class="color-black">x</span>
+                </md-button>
+            </div>
+            <div class="layout-column layout-fill layout-align-space-around-center">
+                <a href="//youtube.com"
+                target="_blank"
+                class="color-off-white">Y O U T U B E</a>
+                <a href="//soundcloud.com"
+                target="_blank"
+                class="color-off-white">S O U N D<br> C L O U D</a>
+                <a href="//bandcamp.com"
+                target="_blank"
+                class="color-off-white">B A N D C A M P</a>
+            </div>
         </div>
     </body>
 </html>

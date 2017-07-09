@@ -1,3 +1,5 @@
+import { BackgroundColorLerper } from './components/bg-color-lerper';
+
 angular.module('tripow')
     .controller('ApplicationController', ApplicationController);
 
@@ -12,6 +14,15 @@ angular.module('tripow')
         vm.showMenu = () => {
             $timeout(() => {
                 vm.menuIsOn = true;
+            }, 500);
+        }
+
+        vm.closeMenu = () => {
+            vm.menuIsOn = false;
+            $timeout(()=> {
+                let bgColorLerper = new BackgroundColorLerper;
+                bgColorLerper.init();
+                bgColorLerper.run();
             }, 500);
         }
 
