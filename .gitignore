@@ -2,3 +2,4 @@ node_modules/
 public/
 *.log
 firebase.config.js
+.DS_Store
