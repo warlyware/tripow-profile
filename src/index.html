@@ -23,7 +23,7 @@
     <body ng-app="tripow"
     ng-controller="ApplicationController as $ctrl"
     class="layout-column">
-        <div id="canvas" class="position-relative background"></div>
+        <div ng-if="!$ctrl.menuIsOn" id="canvas" class="position-relative background"></div>
         <div ng-if="!$ctrl.menuIsOn"
         class="position-relative color-black foreground md-display-3 overflow-hidden">
             <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center height-100">
@@ -73,12 +73,12 @@
             </div>
         </div>
         <div ng-if="$ctrl.menuIsOn"
-        ng-click="$ctrl.closeMenu()"
         ng-class="{'md-display-2': $ctrl.$mdMedia('xs'),
         'md-display-3': $ctrl.$mdMedia('gt-xs')}"
-        class="position-relative layout-column layout-fill foreground-menu overflow-hidden fade-element-in">
-            <div class="layout-row layout-align-end">
-                <md-button class="md-primary md-fab">
+        class="layout-column layout-fill foreground-menu overflow-hidden fade-element-in">
+            <div class="layout-row layout-align-end md-padding">
+                <md-button ng-click="$ctrl.closeMenu()"
+                class="md-primary md-fab">
                     <span class="color-black">x</span>
                 </md-button>
             </div>
