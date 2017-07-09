@@ -27,8 +27,8 @@ export class BackgroundColorLerper {
                 name: 'dark-blue',
                 hex: '#5070F3'
             }, {
-                name: 'light-blue',
-                hex: '#71AAD5'
+                name: 'red',
+                hex: '#FC5E5F'
             }
         ];
     }

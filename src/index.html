@@ -24,7 +24,8 @@
     ng-controller="ApplicationController as $ctrl"
     class="layout-column bg-color-light-gray">
         <div id="canvas" class="position-relative background"></div>
-        <div class="position-relative color-black foreground md-display-3 overflow-hidden">
+        <div ng-if="!$ctrl.menuIsOn"
+        class="position-relative color-black foreground md-display-3 overflow-hidden">
             <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center height-100">
                 G E F H A E 3 X Y S I H V N W A
             </div>
@@ -41,8 +42,9 @@
                 C 0 Z 6 G S N B 5 L Q R V A N M
             </div>
             <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
-                X 6 L P O E D&nbsp;
-                <span id="tripow" class="color-off-white underline-white cursor-pointer">T R I P O W</span>
+                X 6&nbsp;<span class="hide show-gt-xs">L P O E&nbsp;</span> D&nbsp;
+                <span ng-click="$ctrl.showMenu()"
+                id="tripow" class="color-off-white underline-white cursor-pointer">T R I P O W</span>
                 &nbsp;X Q N
             </div>
             <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
@@ -69,6 +71,13 @@
             <div class="layout-row padding-top-16 no-wrap-text layout-align-center-center">
                 O X H E B J E Z B M U 9 4 D A B H
             </div>
+        </div>
+        <div ng-if="$ctrl.menuIsOn"
+        class="position-absolute layout-fill foreground md-display-3 overflow-hidden
+        layout-column layout-align-space-around-center">
+            <a href="//youtube.com" class="color-off-white">Y O U T U B E</a>
+            <a href="//soundcloud.com" class="color-off-white">S O U N D C L O U D</a>
+            <a href="//bandcamp.com" class="color-off-white">B A N D C A M P</a>
         </div>
     </body>
 </html>
