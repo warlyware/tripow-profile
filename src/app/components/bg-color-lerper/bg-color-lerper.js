@@ -57,6 +57,8 @@ export class BackgroundColorLerper {
         this.canvas = this.sketchInstance.createCanvas(window.innerWidth, window.innerHeight);
         this.canvas.parent('canvas');
         this.tripowElement = this.sketchInstance.select('#tripow');
+        this.originalTripowElement = {};
+        angular.copy(this.tripowElement, this.originalTripowElement);
         this.tripowElement.mousePressed(() => {
             this.handleTripowClick();
         });
@@ -97,7 +99,6 @@ export class BackgroundColorLerper {
     }
 
     fadeToBlack() {
-        console.log('trying to fade to black');
         if (this.fadeCounter < 1) {
             this.fadeCounter += .005;
             this.bgColor = this.sketchInstance.lerpColor(
@@ -108,8 +109,12 @@ export class BackgroundColorLerper {
             this.sketchInstance.background(this.bgColor);
         }
         if (this.fadeCounter > 0.1) {
+            if (this.fadeCounter > 0.3) {
+                this.tripowElement.remove();
+            }
+            this.fontSize += 0.25;
             this.opacity -= 0.05;
-            this.tripowElement.addClass('clicked');
+            this.tripowElement.style('font-size', `${this.fontSize}px`);
             this.tripowElement.style('opacity', `${this.opacity}`);
         }
     }
