@@ -7,17 +7,13 @@ angular.module('tripow')
         let vm = this;
 
         vm.menuIsOn = false;
+        vm.$mdMedia = $mdMedia;
 
         vm.showMenu = () => {
             $timeout(() => {
                 vm.menuIsOn = true;
             }, 500);
         }
-
-        vm.letters = [
-            ['X', 'V', 'H', 'G', '5'],
-            ['F', '4', 'O', 'C', 'F']
-        ];
 
         return vm;
     }

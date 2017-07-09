@@ -1,6 +1,6 @@
 import { BackgroundColorLerper } from './components/bg-color-lerper';
 
-angular.module('tripow', ['ngMaterial']);
+angular.module('tripow', ['ngMaterial', 'ngAnimate']);
 
 angular.module('tripow').run(() => {
 
